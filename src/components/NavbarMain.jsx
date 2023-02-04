@@ -16,7 +16,7 @@ function NavbarMain() {
       </div>
 
       <div className="flex gap-x-1.5 md:col-span-6">
-        <a href="#">new</a> |<a href="#">past</a> |<a href="#">comments</a> |
+        <a href="#" className="text-white">new</a> |<a href="#">past</a> |<a href="#">comments</a> |
         <a href="#">ask</a> |<a href="#">show</a> |<a href="#">jobs</a> |
         <a href="#">submit</a>
       </div>

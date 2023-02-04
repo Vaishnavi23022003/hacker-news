@@ -6,13 +6,13 @@ import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 let pQuery = "";
 
 const searchOptions = [
-  { value: "all", label: "All" },
   { value: "stories", label: "Stories" },
   { value: "comments", label: "Comments" },
+  { value: "all", label: "All" },
 ];
 const sortOptions = [
-  { value: "date", label: "Date" },
   { value: "popularity", label: "Popularity" },
+  { value: "date", label: "Date" },
 ];
 const timeOptions = [
   { value: "allTime", label: "All time" },
@@ -24,8 +24,8 @@ const timeOptions = [
 
 function SearchResult({ query }) {
   const [qResult, setResult] = useState([]);
-  const [searchValue, setSearch] = useState("all");
-  const [sortValue, setSort] = useState("date");
+  const [searchValue, setSearch] = useState("stories");
+  const [sortValue, setSort] = useState("popularity");
   const [timeValue, setTime] = useState("allTime");
   const [page, setPage] = useState(1);
 

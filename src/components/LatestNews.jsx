@@ -54,7 +54,7 @@ function LatestNews() {
         </tbody>
       </table>
       <div className="bg-[#f6f6ef] text-center p-[18px]">
-        <span className="text-[10.6px]">
+        <span className="text-[10.6px] cursor-pointer">
           {" "}
           Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC |
           Contact
@@ -70,7 +70,7 @@ function LatestNews() {
             });
           }}
         >
-          Search: <input type="text" className="border-[1px] border-black"  onChange={(e)=>setQuery(e.target.value)}/>
+          Search: <input type="text" className="border-[1px] border-black focus:outline-none"  onChange={(e)=>setQuery(e.target.value)}/>
         </form>
       </div>
     </>
