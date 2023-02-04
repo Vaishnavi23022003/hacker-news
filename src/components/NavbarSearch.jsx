@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch, FaRegSun } from "react-icons/fa";
 import SearchResult from "./SearchResult";
-import { useNavigate } from "react-router-dom";
 
 function NavbarSearch({ query }) {
   const [inputValue, setInputValue] = useState(query);
