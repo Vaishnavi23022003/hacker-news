@@ -15,7 +15,7 @@ function NavbarMain() {
         <span className="font-bold self-center">Hacker News</span>
       </div>
 
-      <div className="flex gap-x-1.5 md:col-span-6">
+      <div className="flex gap-x-1.5 flex-wrap [&>a]:py-[2px] md:[&>a]:py-[0px] md:flex-nowrap md:col-span-6">
         <a href="#" className="text-white">new</a> |<a href="#">past</a> |<a href="#">comments</a> |
         <a href="#">ask</a> |<a href="#">show</a> |<a href="#">jobs</a> |
         <a href="#">submit</a>

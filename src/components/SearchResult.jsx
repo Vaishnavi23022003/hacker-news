@@ -54,9 +54,9 @@ function SearchResult({ query }) {
   }, [page]);
 
   return (
-    <div className="bg-[#f6f6ef] p-4 w-screen md:w-full">
-      <div className="flex gap-2 items-center [&>select]:text-[#696969] [&>select]:bg-[#f6f6ef] pb-2">
-        <label>Search </label>
+    <div className="bg-[#f6f6ef] p-4 w-screen md:w-full [&>*]:break-words">
+      <div className="flex flex-wrap gap-2 items-center [&>select]:text-[#696969] [&>select]:bg-[#f6f6ef] pb-2">
+        <label className="hidden md:inline-block">Search </label>
         <select
           name="search"
           id="search"
@@ -74,7 +74,7 @@ function SearchResult({ query }) {
             </option>
           ))}
         </select>
-        <label> by </label>
+        <label className="hidden md:inline-block"> by </label>
         <select
           name="sortBy"
           id="sortBy"
@@ -92,7 +92,7 @@ function SearchResult({ query }) {
             </option>
           ))}
         </select>
-        <label> for </label>
+        <label className="hidden md:inline-block"> for </label>
         <select
           name="time"
           id="time"
