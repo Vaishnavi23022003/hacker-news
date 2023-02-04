@@ -31,19 +31,21 @@ export const searchDefault = async (query, type, sort, time, page) => {
   else if (type === "comments") url += "&tags=comment";
 
   if (time !== "allTime") {
+    let currTime = Math.round(new Date().getTime() / 1000);
+    console.log(currTime);
     url += "&numericFilters=created_at_i>";
     switch (time) {
       case "day":
-        url += "86400";
+        url += `${currTime - 86400}`;
         break;
       case "week":
-        url += "604800,created_at_i<86400";
+        url += `${currTime - 604800},created_at_i<${currTime - 86400}`;
         break;
       case "month":
-        url += "2628288,created_at_i<604800";
+        url += `${currTime - 2628288},created_at_i<${currTime - 604800}`;
         break;
       default:
-        url += "31539456,created_at_i<2628288";
+        url += `${currTime - 31539456},created_at_i<${currTime - 2628288}`;
         break;
     }
   }
@@ -53,6 +55,6 @@ export const searchDefault = async (query, type, sort, time, page) => {
     .then(({ data }) => data);
 
   let result = response.hits;
-  if(!result.length) result="none";
+  if (!result.length) result = "none";
   return result;
 };
